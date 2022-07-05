@@ -1,0 +1,11 @@
+No exemplo do bot que você construiu, o conjunto de dados necessários estava disponível no site diretamente por meio de um link já definido. 
+No entanto como você resolveria a captura dos dados caso fosse necessário antes navegar no site (executando passos e cliques por meio de menus, login, botões, links) 
+para se chegar ao arquivo alvo (se não existisse um link direto para o conjunto de dados).
+
+Solução
+
+Utilizaria a API Selenium, primeiramente importaria um webdriver compatível com o browser, posteriormente importaria as keys para passar
+o nome de usuário e a senha para os campos certos. Abriria o nevegador através de instanciação com o webdriver, abriria a URL com o browser.get, após isso
+inspecionaria os elementos da página para achar os IDs dos campos de login, usaria o método send_keys para passar o nome de usuário e a senha. Usaria
+o find_element_by_xpath para achar o botão de envio da página do webbrowser, depois executo um evento de clique no botão de enviar aí já terei acesso 
+à área registrada do site para poder raspar os dados.
